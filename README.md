@@ -1,2 +1,10 @@
 # Tweets-analysis
-Tweets analysis to identify real disasters
+Tweets analysis to identify real disasters.
+
+For this project I used the Kaggle Disaster Tweets dataset, available at https://www.kaggle.com/c/nlp-getting-started. This dataset is composed of tweets that may or may not be about disasters. There are two csv files, train.csv (~8500 samples) and test.csv (~3500 samples) -- for this project I only used train.csv since test.csv doesn't include ground truth labels. Each tweet in train.csv has been hand-annotated to indicate if it is about a real disaster (1) or not (2). For more info, see https://www.kaggle.com/c/nlp-getting-started/data. 
+
+The assignment was to build a ML pipeline on this dataset. Given the text of a tweet (and any other features), it was neccessary to train an ML classifer that predicts whether the tweet is about a real disaster or not. At the minimum, the pipeline contained feature extraction (like min_df in bag of words/TFIDF vectorizer to control your vocab size), a comparison of at least 3 different ML approaches (using Logistic Regression or Naive Bayes as a baseline), hyperparameter optimization, model evaluation, and some basic error analysis. For evaluation, report precision, recall, and F1 scores on the test set were reported with the best result highlighted. Also  the training times and prediction times of the different ML approaches were compared (example: Python's built-in `time` library).
+
+There are two .csv files available in the originial dataset, train.csv and test.csv. Since test.csv doesn't have any ground truth labels, those were ignored for this project and instead the train, validation, and test sets were all created from train.csv (using 90% of the data for training and 10% for testing). 
+
+The Jupyter Notebooks include a write-up that describes (1) a description of the dataset, (2) a description of your feature extraction process and what worked and what didn't, (3) a description of which models and hyperparameters I chose and why, and (4) some discussion of the results and comparison between the different approaches tried. This writeup is broken up into chunks within the code for easy follow up.
